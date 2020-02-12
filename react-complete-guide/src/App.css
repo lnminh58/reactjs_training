@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.btn-counter {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.txt-counter {
+  color: #2c3e50;
+  font-size: 25px;
+  font-weight: 600;
+}
