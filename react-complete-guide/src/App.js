@@ -1,59 +1,69 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link as RouterLink } from 'react-router-dom';
+import { AppBar, Toolbar, Box, Link, InputBase } from '@material-ui/core';
+import { Search as SearchIcon } from '@material-ui/icons';
+import { withStyles, ThemeProvider } from '@material-ui/core/styles';
 
 import './App.css';
-import Person from './components/Person';
+import Home from './pages/Home';
+import About from './pages/About';
+
+import { appTheme } from './config/theme';
+
+import styles from './appStyle';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      counter: 0
-    };
-    this.randomAge = 0
-  }
-
-  componentDidMount() {
-    console.log('randomAge::', this.randomAge)
-  }
-
-  // bind this for passing params
-  increaseCounter = (value) => () => {
-    const { counter } = this.state;
-    this.setState({ counter: counter + value })
-    this.randomAge = value;
-    console.log('randomAge:::', this.randomAge)
   }
 
   render() {
-    const { counter } = this.state;
-    console.log('counter:::', counter);
+    const { classes } = this.props;
     return (
-      <div className="App">
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
-        <h1>Hi, I'm a React Counter App</h1>
-        <button className="btn-counter" onClick={this.increaseCounter(3)}>
-          Increase
-        </button>
-        <p className="txt-counter">{counter}</p>
-        {/* <Person name='minh' age={counter} birthday={}/>
-        <Person name='thiem' age={this.randomAge}/> */}
-        <Person name='john' age={21} birthday='5-8'/>
-      </div>
+      <ThemeProvider theme={appTheme}>
+        <Router>
+          <div>
+            <AppBar position="static">
+              <Toolbar>
+                <Box display="flex" flexGrow={1}>
+                  <Link component={RouterLink} color="textSecondary" classes={{ root: classes.linkRoot }} to="/">
+                    Home
+                  </Link>
+                  <Link component={RouterLink} color="textSecondary" to="/about">
+                    About
+                  </Link>
+                </Box>
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <SearchIcon />
+                  </div>
+                  <InputBase
+                    placeholder="Search…"
+                    classes={{
+                      root: classes.inputRoot,
+                      input: classes.inputInput
+                    }}
+                    inputProps={{ 'aria-label': 'search' }}
+                  />
+                </div>
+              </Toolbar>
+            </AppBar>
+
+            {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </ThemeProvider>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
