@@ -6,7 +6,7 @@ const SIZE = {
   laptop: '1024px',
   laptopL: '1600px',
   desktop: '1980px',
-  desktopL: '2560px'
+  desktopL: '2560px',
 };
 
 const BREAK_POINT = {
@@ -17,7 +17,7 @@ const BREAK_POINT = {
   laptop_and_down: `(max-width: ${SIZE.laptop})`,
   laptopL_and_down: `(max-width: ${SIZE.laptopL})`,
   desktop_and_down: `(max-width: ${SIZE.desktop})`,
-  desktopL_and_down: `(max-width: ${SIZE.desktopL})`
+  desktopL_and_down: `(max-width: ${SIZE.desktopL})`,
 };
 
-export default BREAK_POINT
+export default BREAK_POINT;

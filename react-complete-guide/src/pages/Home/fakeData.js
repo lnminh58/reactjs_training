@@ -5,7 +5,8 @@ export const blogPosts = [
     createdAt: 1581931200859,
     postImage:
       'https://images.unsplash.com/photo-1581554848139-14b3e6f7fcfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    detail: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nQuia sunt animi nulla veniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, itaque.`,
+    detail:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nQuia sunt animi nulla veniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, itaque.',
     replies: [
       {
         avatar:
@@ -22,7 +23,8 @@ export const blogPosts = [
     createdAt: 1581930900859,
     postImage:
       'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    detail: `Consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nVeniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, itaque.`,
+    detail:
+      'Consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nVeniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, itaque.',
     replies: [
       {
         avatar:
@@ -46,7 +48,8 @@ export const blogPosts = [
     createdAt: 1581930200859,
     postImage:
       'https://images.unsplash.com/photo-1503342564391-ebb28fc32ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    detail: `Sapiente ratione enim dolores  amet consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nQuia sunt animi nulla veniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui.`,
+    detail:
+      'Sapiente ratione enim dolores  amet consectetur adipisicing elit. Iusto ullam dolores voluptatibus, facilis laborum corporis odit quaerat possimus veritatis eveniet nam iure rem ipsam praesentium labore itaque maiores amet. Sapiente ratione enim dolores deleniti.\nQuia sunt animi nulla veniam aliquam aperiam soluta aut libero quis facere reprehenderit nostrum dicta qui.',
     replies: []
   }
 ];

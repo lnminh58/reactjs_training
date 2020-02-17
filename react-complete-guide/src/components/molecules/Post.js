@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { get } from 'lodash';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
-import { Button, FlexContainer } from '../atoms';
-import { APP_COLOR, BREAK_POINT } from '../../styles';
+import { APP_COLOR } from '../../styles';
 
 const Container = styled.div`
   padding: 20px 15px;
@@ -48,6 +48,10 @@ const PostContent = styled.p`
 `;
 
 class Post extends Component {
+  static propTypes = {
+    data: PropTypes.object.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -66,11 +70,13 @@ class Post extends Component {
         <HeadingTitle>{title}</HeadingTitle>
         <HeadingDescription>
           {`${description}, `}
-          <HeadingTime>{moment(postCreatedAt).format('MMM DD, YYYY')}</HeadingTime>
+          <HeadingTime>
+            {moment(postCreatedAt).format('MMM DD, YYYY')}
+          </HeadingTime>
         </HeadingDescription>
         <PostImage src={image} />
-        {detail.split('\n').map(detailPara => (
-          <PostContent>{detailPara}</PostContent>
+        {detail.split('\n').map((detailPara, idx) => (
+          <PostContent key={idx}>{detailPara}</PostContent>
         ))}
       </Container>
     );

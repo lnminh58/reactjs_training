@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Box, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 import * as FA from 'react-icons/fa';
 
 import { blogPosts } from './fakeData';
@@ -19,7 +19,7 @@ import {
   BannerButtonText,
   MainContainer,
   PostContainer,
-  SideContainer
+  SideContainer,
 } from './styled';
 
 class index extends Component {
@@ -31,7 +31,10 @@ class index extends Component {
   renderHeader() {
     return (
       <>
-        <FlexContainer justifyContent="space-between" backgroundColor={APP_COLOR.PURE_BLACK}>
+        <FlexContainer
+          justifyContent="space-between"
+          backgroundColor={APP_COLOR.PURE_BLACK}
+        >
           <FlexContainer>
             <Button hoverBackgroundColor={APP_COLOR.DARK}>
               <FA.FaFacebookSquare color={APP_COLOR.PURE_WHITE} size={20} />
@@ -51,7 +54,9 @@ class index extends Component {
         <HeaderBanner>
           <HeaderTitle>JANE BLOGLIFE</HeaderTitle>
           <HeaderWelcome>
-            Welcome to the blog of <HeaderWelcomeTag>Jane's world</HeaderWelcomeTag>
+            Welcome to the blog of
+            {' '}
+            <HeaderWelcomeTag>Jane &apos;s world</HeaderWelcomeTag>
           </HeaderWelcome>
         </HeaderBanner>
       </>
@@ -61,10 +66,13 @@ class index extends Component {
   renderBanner() {
     return (
       <BannerContainer>
-        <BannerSmallText>Jane 's</BannerSmallText>
+        <BannerSmallText>Jane &apos;s</BannerSmallText>
         <BannerLargeText>FASHION BLOG</BannerLargeText>
         <FlexContainer direction="row" justifyContent="flex-start" back>
-          <Button backgroundColor="rgba(255,255,255,0.6)" hoverBackgroundColor={APP_COLOR.WHITE}>
+          <Button
+            backgroundColor="rgba(255,255,255,0.6)"
+            hoverBackgroundColor={APP_COLOR.WHITE}
+          >
             <BannerButtonText>Subscribe</BannerButtonText>
           </Button>
         </FlexContainer>
@@ -73,11 +81,13 @@ class index extends Component {
   }
 
   renderPostList() {
-    return <>
-      {
-        blogPosts.map(postItem => <Post data={postItem} />)
-      }
-    </>;
+    return (
+      <>
+        {blogPosts.map((postItem, idx) => (
+          <Post data={postItem} key={idx} />
+        ))}
+      </>
+    );
   }
 
   render() {
@@ -87,7 +97,7 @@ class index extends Component {
         {this.renderBanner()}
         <MainContainer>
           <PostContainer>{this.renderPostList()}</PostContainer>
-          <SideContainer></SideContainer>
+          <SideContainer>{}</SideContainer>
         </MainContainer>
       </Container>
     );

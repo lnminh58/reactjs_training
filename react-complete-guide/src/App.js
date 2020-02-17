@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link as RouterLink } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouterLink,
+} from 'react-router-dom';
 import { AppBar, Toolbar, Box, Link, InputBase } from '@material-ui/core';
 import { Search as SearchIcon } from '@material-ui/icons';
 import { withStyles, ThemeProvider } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
 import './App.css';
 import Home from './pages/Home';
@@ -13,9 +19,9 @@ import { appTheme } from './config/theme';
 import styles from './appStyle';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
 
   render() {
     const { classes } = this.props;
@@ -26,10 +32,19 @@ class App extends Component {
             <AppBar position="static">
               <Toolbar>
                 <Box display="flex" flexGrow={1}>
-                  <Link component={RouterLink} color="textSecondary" classes={{ root: classes.linkRoot }} to="/">
+                  <Link
+                    component={RouterLink}
+                    color="textSecondary"
+                    classes={{ root: classes.linkRoot }}
+                    to="/"
+                  >
                     Home
                   </Link>
-                  <Link component={RouterLink} color="textSecondary" to="/about">
+                  <Link
+                    component={RouterLink}
+                    color="textSecondary"
+                    to="/about"
+                  >
                     About
                   </Link>
                 </Box>
@@ -41,7 +56,7 @@ class App extends Component {
                     placeholder="Search…"
                     classes={{
                       root: classes.inputRoot,
-                      input: classes.inputInput
+                      input: classes.inputInput,
                     }}
                     inputProps={{ 'aria-label': 'search' }}
                   />

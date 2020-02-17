@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled from 'styled-components';
 import { APP_COLOR, BREAK_POINT } from '../../styles';
 
@@ -74,17 +72,17 @@ export const MainContainer = styled.div`
   padding: 10px 15px;
   display: flex;
   flex-wrap: wrap;
-`
+`;
 export const PostContainer = styled.div`
   flex-basis: 65%;
   @media ${BREAK_POINT.tablet_and_down} {
     flex-basis: 100%;
   }
-`
+`;
 export const SideContainer = styled.div`
   flex-basis: 35%;
   background-color: cyan;
   @media ${BREAK_POINT.tablet_and_down} {
     flex-basis: 100%;
   }
-`
+`;
