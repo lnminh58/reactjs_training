@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 import { Box, Container } from '@material-ui/core';
 import * as FA from 'react-icons/fa';
-import { Button, FlexContainer } from '../../components/atoms';
 
+import { blogPosts } from './fakeData';
+import { Button, FlexContainer } from '../../components/atoms';
+import { Post } from '../../components/molecules';
 import { APP_COLOR } from '../../styles';
+
 import {
   HeaderBanner,
   HeaderTitle,
@@ -14,7 +17,9 @@ import {
   BannerSmallText,
   BannerLargeText,
   BannerButtonText,
-  MainContainer
+  MainContainer,
+  PostContainer,
+  SideContainer
 } from './styled';
 
 class index extends Component {
@@ -55,31 +60,36 @@ class index extends Component {
 
   renderBanner() {
     return (
-      <>
-        <BannerContainer>
-          <BannerSmallText>Jane 's</BannerSmallText>
-          <BannerLargeText>FASHION BLOG</BannerLargeText>
-          <FlexContainer direction="row" justifyContent="flex-start" back>
-            <Button backgroundColor="rgba(255,255,255,0.6)" hoverBackgroundColor={APP_COLOR.WHITE}>
-              <BannerButtonText>Subscribe</BannerButtonText>
-            </Button>
-          </FlexContainer>
-        </BannerContainer>
-      </>
+      <BannerContainer>
+        <BannerSmallText>Jane 's</BannerSmallText>
+        <BannerLargeText>FASHION BLOG</BannerLargeText>
+        <FlexContainer direction="row" justifyContent="flex-start" back>
+          <Button backgroundColor="rgba(255,255,255,0.6)" hoverBackgroundColor={APP_COLOR.WHITE}>
+            <BannerButtonText>Subscribe</BannerButtonText>
+          </Button>
+        </FlexContainer>
+      </BannerContainer>
     );
+  }
+
+  renderPostList() {
+    return <>
+      {
+        blogPosts.map(postItem => <Post data={postItem} />)
+      }
+    </>;
   }
 
   render() {
     return (
-      <>
-        <Container maxWidth="md" style={{ padding: '20px 0' }}>
-          {this.renderHeader()}
-          {this.renderBanner()}
-          <MainContainer>
-            
-          </MainContainer>
-        </Container>
-      </>
+      <Container maxWidth="lg" style={{ padding: '20px 0' }}>
+        {this.renderHeader()}
+        {this.renderBanner()}
+        <MainContainer>
+          <PostContainer>{this.renderPostList()}</PostContainer>
+          <SideContainer></SideContainer>
+        </MainContainer>
+      </Container>
     );
   }
 }

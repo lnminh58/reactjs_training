@@ -71,5 +71,20 @@ export const BannerButtonText = styled.span`
 
 export const MainContainer = styled.div`
   background-color: ${APP_COLOR.WHITE};
-  padding: 20px 30px;
+  padding: 10px 15px;
+  display: flex;
+  flex-wrap: wrap;
+`
+export const PostContainer = styled.div`
+  flex-basis: 65%;
+  @media ${BREAK_POINT.tablet_and_down} {
+    flex-basis: 100%;
+  }
+`
+export const SideContainer = styled.div`
+  flex-basis: 35%;
+  background-color: cyan;
+  @media ${BREAK_POINT.tablet_and_down} {
+    flex-basis: 100%;
+  }
 `
