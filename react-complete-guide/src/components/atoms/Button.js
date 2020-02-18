@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { APP_COLOR } from '../../styles';
+import { APP_COLOR } from '@/styles';
 
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
@@ -8,7 +8,10 @@ const Button = styled.button`
   border: ${props => props.border || 'none'};
   :hover {
     background-color: ${props => props.hoverBackgroundColor || APP_COLOR.WHITE};
-  }
+  };
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Button;

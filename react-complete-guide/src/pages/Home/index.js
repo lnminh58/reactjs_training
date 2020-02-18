@@ -4,9 +4,10 @@ import { Container } from '@material-ui/core';
 import * as FA from 'react-icons/fa';
 
 import { Button, FlexContainer } from '@/components/atoms';
+import { Post } from '@/components/molecules';
+import { APP_COLOR } from '@/styles';
+
 import { blogPosts } from './fakeData';
-import { Post } from '../../components/molecules';
-import { APP_COLOR } from '../../styles';
 
 import {
   HeaderBanner,
@@ -54,8 +55,7 @@ class index extends Component {
         <HeaderBanner>
           <HeaderTitle>JANE BLOGLIFE</HeaderTitle>
           <HeaderWelcome>
-            Welcome to the blog of
-            {' '}
+            Welcome to the blog of&nbsp;
             <HeaderWelcomeTag>Jane &apos;s world</HeaderWelcomeTag>
           </HeaderWelcome>
         </HeaderBanner>
@@ -83,9 +83,18 @@ class index extends Component {
   renderPostList() {
     return (
       <>
-        {blogPosts.map((postItem, idx) => (
-          <Post data={postItem} key={idx} />
-        ))}
+        {blogPosts.map((postItem, idx) => {
+          const containerStyle = { marginBottom: 0 };
+          return (
+            <Post
+              data={postItem}
+              key={idx}
+              containerStyle={
+                idx === blogPosts.length - 1 ? containerStyle : null
+              }
+            />
+          );
+        })}
       </>
     );
   }
@@ -97,7 +106,9 @@ class index extends Component {
         {this.renderBanner()}
         <MainContainer>
           <PostContainer>{this.renderPostList()}</PostContainer>
-          <SideContainer>{}</SideContainer>
+          <SideContainer>
+            {}
+          </SideContainer>
         </MainContainer>
       </Container>
     );

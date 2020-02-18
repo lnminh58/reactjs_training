@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-const FlexContainer = styled.div`
-  background-color: ${props => props.backgroundColor};
+import Div from './Div';
+
+const FlexContainer = styled(Div)`
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
   justify-content: ${props => props.justifyContent || 'center'};

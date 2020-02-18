@@ -57,6 +57,7 @@ module.exports = {
     }],
     'react/no-array-index-key': 0,
     'class-methods-use-this': 0,
+    'react/require-default-props': 0,
   },
   globals: {
     __DEV__: true,

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { APP_COLOR, BREAK_POINT } from '../../styles';
+import { APP_COLOR, BREAK_POINT } from '@/styles';
 
 export const HeaderBanner = styled.div`
   padding: 48px 16px;
@@ -69,20 +69,20 @@ export const BannerButtonText = styled.span`
 
 export const MainContainer = styled.div`
   background-color: ${APP_COLOR.WHITE};
-  padding: 10px 15px;
+  padding: 20px 15px;
   display: flex;
   flex-wrap: wrap;
 `;
+
 export const PostContainer = styled.div`
   flex-basis: 65%;
+  margin: 0 15px;
   @media ${BREAK_POINT.tablet_and_down} {
     flex-basis: 100%;
   }
 `;
+
 export const SideContainer = styled.div`
-  flex-basis: 35%;
-  background-color: cyan;
-  @media ${BREAK_POINT.tablet_and_down} {
-    flex-basis: 100%;
-  }
+  flex-grow: 1;
+  margin: 0 15px;
 `;
