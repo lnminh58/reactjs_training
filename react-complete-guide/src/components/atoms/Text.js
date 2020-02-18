@@ -10,7 +10,9 @@ const Text = styled.div`
   margin: ${props => props.margin || '0px'};
   padding: ${props => props.padding || '0px'};
   font-weight: ${props => props.fontWeight || 'nomarl'};
-  line-height: ${props => props.lineHeight || props.fontSize};
+  line-height: ${props => props.lineHeight};
+  text-transform: ${props => props.textTransform || 'none'};
+  background-color: ${props => props.backgroundColor};
 `;
 
 export default Text;

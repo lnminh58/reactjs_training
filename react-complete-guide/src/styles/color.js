@@ -1,10 +1,10 @@
 const APP_COLOR = {
   PRIMARY: '#ff7675',
   SECONDARY: '#00b894',
-  LIGHT: '#636e72',
+  LIGHT: '#939ea2',
   DARK: '#2d3436',
   WARNING: '#fdcb6e',
-  DANGER: '#e17055',
+  DANGER: '#f44336',
   INFO: '#00cec9',
   WHITE: '#f0f5f7',
   WHITE_TRANS: 'rgba(255,255,255,0.7)',

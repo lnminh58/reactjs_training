@@ -1,5 +1,4 @@
-import Post from './Post'
+import Post from './Post';
+import Card from './Card';
 
-export {
-  Post
-}
+export { Post, Card };

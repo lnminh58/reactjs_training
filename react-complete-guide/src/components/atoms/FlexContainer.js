@@ -7,6 +7,7 @@ const FlexContainer = styled(Div)`
   flex-direction: ${props => props.direction || 'row'};
   justify-content: ${props => props.justifyContent || 'center'};
   align-content: ${props => props.alignContent || 'center'};
+  flex-wrap: ${props => props.flexWrap};
 `;
 
 export default FlexContainer;
