@@ -57,7 +57,9 @@ class Post extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isDisplayReply: false,
+    };
   }
 
   renderReplies(replies) {
@@ -96,12 +98,16 @@ class Post extends Component {
 
   render() {
     const { data, containerStyle } = this.props;
+    const { isDisplayReply } = this.state;
+
     const title = get(data, 'title');
     const description = get(data, 'description');
     const postCreatedAt = get(data, 'createdAt');
     const image = get(data, 'postImage');
     const detail = get(data, 'detail', '');
     const replies = get(data, 'replies', '');
+
+    const isReplyButtonDisabled = replies.length <= 0;
 
     return (
       <Container style={containerStyle}>
@@ -143,7 +149,11 @@ class Post extends Component {
           </Button>
           <Button
             backgroundColor={APP_COLOR.PURE_BLACK}
-            hoverBackgroundColor={APP_COLOR.BLACK}
+            hoverBackgroundColor={
+              isReplyButtonDisabled ? APP_COLOR.PURE_BLACK : APP_COLOR.BLACK
+            }
+            onClick={() => this.setState({ isDisplayReply: !isDisplayReply })}
+            disabled={isReplyButtonDisabled}
           >
             <ButtonText margin="0px 5px 0px 0px" color={APP_COLOR.WHITE}>
               Replies
@@ -156,7 +166,7 @@ class Post extends Component {
             </ButtonText>
           </Button>
         </FlexContainer>
-        {this.renderReplies(replies)}
+        {isDisplayReply && this.renderReplies(replies)}
       </Container>
     );
   }

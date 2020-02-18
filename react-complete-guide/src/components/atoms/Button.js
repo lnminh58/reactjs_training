@@ -6,12 +6,13 @@ const Button = styled.button`
   background: ${props => props.backgroundColor || APP_COLOR.PURE_BLACK};
   padding: 8px 16px;
   border: ${props => props.border || 'none'};
-  :hover {
-    background-color: ${props => props.hoverBackgroundColor || APP_COLOR.WHITE};
-  };
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: ${props => (!props.disabled ? 'pointer' : 'default')};
+  :hover {
+    background-color: ${props => props.hoverBackgroundColor || APP_COLOR.WHITE};
+  }
 `;
 
 export default Button;
