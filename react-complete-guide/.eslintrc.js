@@ -1,13 +1,14 @@
 module.exports = {
   root: true,
   parser: 'babel-eslint',
-  extends: ['airbnb', 'plugin:react/recommended'],
+  extends: ['airbnb'],
   plugins: ['import'],
   settings: {
     'import/resolver': {
       node: {
         paths: ['src'],
       },
+      // 'babel-module': {},
     },
   },
   rules: {

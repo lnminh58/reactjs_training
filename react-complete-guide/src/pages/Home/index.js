@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { Container } from '@material-ui/core';
 import * as FA from 'react-icons/fa';
 
+import { Button, FlexContainer } from '@/components/atoms';
 import { blogPosts } from './fakeData';
-import { Button, FlexContainer } from '../../components/atoms';
 import { Post } from '../../components/molecules';
 import { APP_COLOR } from '../../styles';
 
