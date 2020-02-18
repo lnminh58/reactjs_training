@@ -8,7 +8,6 @@ module.exports = {
       node: {
         paths: ['src'],
       },
-      // 'babel-module': {},
     },
   },
   rules: {
@@ -52,6 +51,10 @@ module.exports = {
         propTypes: 'static public field',
       },
     ],
+    "import/no-unresolved": [2, {
+      amd: true,
+      ignore: ["@"]
+    }],
     'react/no-array-index-key': 0,
     'class-methods-use-this': 0,
   },
