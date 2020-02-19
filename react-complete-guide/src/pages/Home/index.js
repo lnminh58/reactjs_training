@@ -13,13 +13,7 @@ import {
   MainText,
   ContentText,
   HeaderBanner,
-  HeaderTitle,
-  HeaderWelcome,
-  HeaderWelcomeTag,
   BannerContainer,
-  BannerSmallText,
-  BannerLargeText,
-  BannerButtonText,
   MainContainer,
   PostContainer,
   SideContainer,
@@ -60,11 +54,34 @@ class index extends Component {
         </FlexContainer>
 
         <HeaderBanner>
-          <HeaderTitle>JANE BLOGLIFE</HeaderTitle>
-          <HeaderWelcome>
+          <MainText
+            fontSize="40px"
+            margin="10px 0"
+            textAlign="center"
+            textTransform="uppercase"
+            fontWeight="600"
+          >
+            JANE BLOGLIFE
+          </MainText>
+          <MainText
+            fontSize="16px"
+            margin="0 0 10px 0"
+            textAlign="center"
+            fontWeight="500"
+          >
             Welcome to the blog of&nbsp;
-            <HeaderWelcomeTag>Jane &apos;s world</HeaderWelcomeTag>
-          </HeaderWelcome>
+            <MainText
+              fontSize="16px"
+              margin="0 0 10px 0"
+              fontWeight="500"
+              color={APP_COLOR.PURE_WHITE}
+              backgroundColor={APP_COLOR.PURE_BLACK}
+              padding="0 8px"
+              display="inline"
+            >
+              Jane &apos;s world
+            </MainText>
+          </MainText>
         </HeaderBanner>
       </>
     );
@@ -72,15 +89,36 @@ class index extends Component {
 
   renderBanner() {
     return (
-      <BannerContainer>
-        <BannerSmallText>Jane &apos;s</BannerSmallText>
-        <BannerLargeText>FASHION BLOG</BannerLargeText>
+      <BannerContainer src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+        <MainText
+          fontSize="36px"
+          textTransform="uppercase"
+          fontWeight="600"
+          color={APP_COLOR.PURE_WHITE}
+        >
+          Jane &apos;s
+        </MainText>
+        <MainText
+          fontSize="64px"
+          textTransform="uppercase"
+          fontWeight="600"
+          margin="0 0 10px 0"
+          color={APP_COLOR.PURE_WHITE}
+        >
+          FASHION BLOG
+        </MainText>
         <FlexContainer direction="row" justifyContent="flex-start" back>
           <Button
             backgroundColor="rgba(255,255,255,0.6)"
             hoverBackgroundColor={APP_COLOR.WHITE}
           >
-            <BannerButtonText>Subscribe</BannerButtonText>
+            <MainText
+              fontSize="18px"
+              textTransform="uppercase"
+              color={APP_COLOR.BLACK}
+            >
+              Subscribe
+            </MainText>
           </Button>
         </FlexContainer>
       </BannerContainer>
