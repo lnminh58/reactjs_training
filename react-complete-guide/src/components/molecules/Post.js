@@ -114,7 +114,7 @@ class Post extends Component {
         <PostText
           fontSize="25px"
           fontWeight="500"
-          margin="0 0 15px 0"
+          margin="0 0 5px 0"
           textAlign="center"
         >
           {title}
