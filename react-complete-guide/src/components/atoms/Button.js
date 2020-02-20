@@ -6,7 +6,7 @@ const Button = styled.button`
   background: ${props => props.backgroundColor || APP_COLOR.PURE_BLACK};
   padding: 8px 16px;
   border: ${props => props.border || 'none'};
-  display: flex;
+  display: ${props => props.display || 'flex'};
   justify-content: center;
   align-items: center;
   cursor: ${props => (!props.disabled ? 'pointer' : 'default')};

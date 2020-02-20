@@ -1,23 +1,17 @@
 const SIZE = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1600px',
-  desktop: '1980px',
-  desktopL: '2560px',
+  xs: '375px',
+  sm: '600px',
+  md: '960px',
+  lg: '1280px',
+  xl: '1920px'
 };
 
 const BREAK_POINT = {
-  mobileS_and_down: `(max-width: ${SIZE.mobileS})`,
-  mobileM_and_down: `(max-width: ${SIZE.mobileM})`,
-  mobileL_and_down: `(max-width: ${SIZE.mobileL})`,
-  tablet_and_down: `(max-width: ${SIZE.tablet})`,
-  laptop_and_down: `(max-width: ${SIZE.laptop})`,
-  laptopL_and_down: `(max-width: ${SIZE.laptopL})`,
-  desktop_and_down: `(max-width: ${SIZE.desktop})`,
-  desktopL_and_down: `(max-width: ${SIZE.desktopL})`,
+  xs_and_down: `(max-width: ${SIZE.xs})`,
+  sm_and_down: `(max-width: ${SIZE.sm})`,
+  md_and_down: `(max-width: ${SIZE.md})`,
+  lg_and_down: `(max-width: ${SIZE.lg})`,
+  xl_and_down: `(max-width: ${SIZE.xl})`,
 };
 
 export default BREAK_POINT;

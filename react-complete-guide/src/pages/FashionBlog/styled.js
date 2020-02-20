@@ -42,7 +42,7 @@ export const MainContainer = styled.div`
 export const PostContainer = styled.div`
   flex-basis: 60%;
   margin: 0 15px;
-  @media ${BREAK_POINT.tablet_and_down} {
+  @media ${BREAK_POINT.md_and_down} {
     flex-basis: 100%;
   }
 `;
@@ -51,7 +51,7 @@ export const SideContainer = styled.div`
   flex-grow: 1;
   width: 0px;
   margin: 0 15px;
-  @media ${BREAK_POINT.tablet_and_down} {
+  @media ${BREAK_POINT.md_and_down} {
     margin-top: 30px;
   }
 `;
@@ -90,7 +90,7 @@ export const InsImg = styled.img`
   width: 100%;
   height: 15vw;
   max-height: 200px;
-  @media ${BREAK_POINT.tablet_and_down} {
+  @media ${BREAK_POINT.md_and_down} {
     height: 50vw;
   }
 `;

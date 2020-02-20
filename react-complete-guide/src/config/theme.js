@@ -18,5 +18,14 @@ export const appTheme = createMuiTheme({
       primary: 'rgba(0, 0, 0, 0.87)',
       secondary: '#fff'
     }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920,
+    }
   }
 });
