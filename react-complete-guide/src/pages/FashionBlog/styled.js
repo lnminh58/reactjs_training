@@ -30,6 +30,7 @@ export const BannerContainer = styled.div`
   background-size: cover;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 `;
 
 export const MainContainer = styled.div`

@@ -7,7 +7,11 @@ class index extends Component {
   }
 
   render() {
-    return <p>asdasd</p>;
+    return (
+      <>
+        <h1>coffee store</h1>
+      </>
+    );
   }
 }
 

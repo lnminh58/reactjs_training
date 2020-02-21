@@ -9,6 +9,7 @@ const Button = styled.button`
   display: ${props => props.display || 'flex'};
   justify-content: center;
   align-items: center;
+  width: ${props => props.width};
   cursor: ${props => (!props.disabled ? 'pointer' : 'default')};
   :hover {
     background-color: ${props => props.hoverBackgroundColor || APP_COLOR.WHITE};

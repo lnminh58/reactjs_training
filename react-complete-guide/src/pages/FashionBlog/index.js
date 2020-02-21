@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { Container } from '@material-ui/core';
 import * as FA from 'react-icons/fa';
 
 import { Button, FlexContainer } from '@/components/atoms';
@@ -107,20 +106,18 @@ class index extends Component {
         >
           FASHION BLOG
         </MainText>
-        <FlexContainer direction="row" justifyContent="flex-start" back>
-          <Button
-            backgroundColor="rgba(255,255,255,0.6)"
-            hoverBackgroundColor={APP_COLOR.WHITE}
+        <Button
+          backgroundColor="rgba(255,255,255,0.6)"
+          hoverBackgroundColor={APP_COLOR.WHITE}
+        >
+          <MainText
+            fontSize="18px"
+            textTransform="uppercase"
+            color={APP_COLOR.BLACK}
           >
-            <MainText
-              fontSize="18px"
-              textTransform="uppercase"
-              color={APP_COLOR.BLACK}
-            >
-              Subscribe
-            </MainText>
-          </Button>
-        </FlexContainer>
+            Subscribe
+          </MainText>
+        </Button>
       </BannerContainer>
     );
   }
@@ -236,6 +233,7 @@ class index extends Component {
         <FlexContainer
           direction="column"
           backgroundColor={APP_COLOR.PURE_WHITE}
+          alignItems="strech"
           padding="15px 15px"
         >
           <ContentText margin="0 0 15px 0">
@@ -257,7 +255,7 @@ class index extends Component {
 
   render() {
     return (
-      <Container maxWidth="lg" style={{ padding: '20px 0 0 0' }}>
+      <>
         {this.renderHeader()}
         {this.renderBanner()}
         <MainContainer>
@@ -282,7 +280,7 @@ class index extends Component {
             FashionBlog © 2012 - 2020
           </ContentText>
         </FlexContainer>
-      </Container>
+      </>
     );
   }
 }
